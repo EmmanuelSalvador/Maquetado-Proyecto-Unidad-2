@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Habilidades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    
+  <ion-slide *ngFor="let g of information">
+    <ion-card>
+      <img [src]="g.img"/>
+      <ion-card-header>
+        <ion-card-title>{{g.nombre}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{g.descri}}
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+    
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-tabs>
+            <ion-tab-bar slot="bottom" color="danger">
+              <ion-tab-button (click)="pokedex()" tab="phone-portrait">
+                <ion-icon name="phone-portrait" style="color: white;"></ion-icon>
+                <ion-label>Pokédex</ion-label>
+                <ion-badge>6</ion-badge>
+              </ion-tab-button>
+          
+              <ion-tab-button (click)="movimientos()" tab="construct">
+                <ion-icon name="construct" style="color: white;"></ion-icon>
+                <ion-label>Movimientos</ion-label>
+              </ion-tab-button>
+          
+              <ion-tab-button tab="color-wand">
+                <ion-icon name="color-wand" style="color: white;"></ion-icon>
+                <ion-label>Habilidades</ion-label>
+              </ion-tab-button>
+          
+              <ion-tab-button (click)="objetos()" tab="hammer">
+                <ion-icon name="hammer" style="color: white;"></ion-icon>
+                <ion-label>Objetos</ion-label>
+              </ion-tab-button>
+            </ion-tab-bar>
+          </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
